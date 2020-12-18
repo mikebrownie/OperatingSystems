@@ -1,7 +1,12 @@
+#Created by Michael Brown
+#Last modified 12/17/2020
+#For use on Operating Systems Final Exam at CU Boulder, FALL 2020
+#Algorithims defined at https://www.geeksforgeeks.org/disk-scheduling-algorithms/?ref=lbp
+#Link above also provided skeletons for circular algorithims
 
 #SET THESE BEFORE USING
-disk_size = 5000
-size = 10
+disk_size = 100
+size = 7
 #size = length of posistions array
 
 def FCFS(curr, posisitions):
@@ -129,7 +134,6 @@ def SCAN(curr, posisitions, direction):
             right.append(x)
 
  
-   
     run = 2
     while (run > 0):
         if (direction == "left"):
@@ -311,8 +315,8 @@ def main():
     #Just uncomment whichever one you want to use
     #Don't forget to update $posistions and $curr
     
-    curr = 2150
-    posisitions = [2069, 1212, 2296, 2800, 544, 1618, 356, 1523, 4965, 3681]
+    curr = 15
+    posisitions = [40, 48, 14, 44, 90, 99, 55]
     distance = FCFS(curr, posisitions)
     print("FCFC traveled a distnace of : ", distance)
     print("\n==========================================================================================\n")
@@ -320,18 +324,19 @@ def main():
     print("SSTF traveled a distance of : ", distance)
     print("\n==========================================================================================\n")
 
-    direction = "right" #which direction we travel first
+    direction = "right" #which direction to travel first
    
     distance = CSCAN(curr, posisitions, direction)
     print("CSCAN traveled a distance of : ", distance)
     print("\n==========================================================================================\n")
+
     distance = SCAN(curr, posisitions, direction)
     print("SCAN traveled a distance of : ", distance)
     print("\n==========================================================================================\n")
-    distance = LOOK(curr, posisitions, 'right')
+    distance = LOOK(curr, posisitions, direction)
     print("LOOK traveled a distance of : ", distance)
     print("\n==========================================================================================\n")
-    distance = CLOOK(curr, posisitions, 'right')
+    distance = CLOOK(curr, posisitions, direction)
     print("CLOOK traveled a distance of : ", distance)
     print("\n==========================================================================================\n")
 
