@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)file:///C:/Users/soccx/Downloads/PA_4_OS.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PA_4_OS</title>
+  <link rel="stylesheet" href="./readme_files/style.css">
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h2 id="files-included">Files Included:</h2>
+<h3 id="multilookup.c">multilookup.c</h3>
+<ul>
+<li>Thread-safe requester and resolver function prototypes</li>
+<li>Driver definition</li>
+<li>Command line reader implementation</li>
+</ul>
+<h3 id="multilookup.h">multilookup.h</h3>
+<ul>
+<li>Requester and resolver function declarations</li>
+<li>Shared argument structure definition for creating Posix Threads (pthreads).</li>
+</ul>
+<h3 id="queue.h">queue.h</h3>
+<ul>
+<li>Memory leak free queue implementation in C</li>
+<li>Queue operation declarations</li>
+</ul>
+<h3 id="queue.c">queue.c</h3>
+<ul>
+<li>Function prototypes for queue operations</li>
+</ul>
+<h3 id="performance.txt">performance.txt</h3>
+<p><em>Recorded multi-lookup performance for the following scenarios:</em></p>
+<ul>
+<li>1 requester thread and 1 resolver thread</li>
+<li>1 requester thread and 3 resolver threads</li>
+<li>3 requester threads and 1 resolver thread</li>
+<li>3 requester threads and 3 resolver threads</li>
+<li>5 requester threads and 5 resolver threads<br>
+1 second sleeps and 0.5 second sleeps both included.</li>
+</ul>
+<h1 id="man-page-for-multi-lookup">Man Page for Multi-Lookup</h1>
+<h2 id="name">NAME</h2>
+<p>multi-lookup - resolve a set of hostnames to IP addresses</p>
+<h2 id="synopsis">SYNOPSIS</h2>
+<pre><code>./multi-lookup &lt;# requester&gt; &lt;# resolver&gt; &lt;requester log&gt; &lt;resolver log&gt; [ &lt;data file&gt; ... ]  
+</code></pre>
+<h2 id="description">DESCRIPTION</h2>
+<p>The file names specified by  are passed to the pool of requester threads which place information into a shared data area. Resolver threads read the shared data area and find the corresponding IP address.</p>
+<h3 id="parameters">PARAMETERS</h3>
+<p>&lt;# requesters&gt; number of requestor threads to place into the thread pool.</p>
+<p>&lt;# resolvers&gt; number of resolver threads to place into the thread pool.</p>
+<p> name of the file into which all the requester status information is written.</p>
+<p> name of the file into which all the resolver status information is written.</p>
+<p> filename to be processed. Each file contains a list of host names, one per line, that are to be resolved.</p>
+<blockquote>
+<p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
+</blockquote>
+</div>
+
+
+
+</body></html>

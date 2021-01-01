@@ -1,0 +1,19 @@
+Starting from: 1,805
+
+The queue of pending requests, in FIFO order, is:                                                                                              
+2069, 1212, 2296, 2800, 544, 1618, 356, 1523, 4965, 3681
+
+FCFS:
+
+(2150-2069) + (2069-1212) + -(1212-2296) + -(2296-2800)
+
+SSTF: shortest seek time first
+
+SCAN: Start from smallest,
+
+LOOK: Scanning, but can skip ahead.
+
+CSCAN: Like can, once we hit right jump to frint
+
+
+ 
